@@ -1,6 +1,6 @@
 # Extended Euclidean Algorithm
 
-This program calculates the Greatest Common Denominator of two numbers *a* and *b* and the Bézout coefficients using the Extended Euclidean Algorithm. The Bézout coefficients of *GCD(a,b)* are the integers *x* and *y* that fulfill Bézout's Identity:
+This program calculates the Greatest Common Denominator of two numbers *a* and *b* and their Bézout coefficients using the Extended Euclidean Algorithm. The Bézout coefficients of *GCD(a,b)* are the integers *x* and *y* that fulfill Bézout's Identity:
 
 *ax + by = GCD(a,b)*.
 
@@ -15,7 +15,7 @@ Instructions to set up and configure these can be found online.
 To build the program, the `make` command can be used. 
 
 
-There are two ways to run the program. Without command line arguments, the program will generate two random 4096 integers, calculate their GCD, and output their Bézout coefficients.
+There are two ways to run the program. Without command line arguments, the program will generate two random 4096-bit integers, calculate their GCD, and output their Bézout coefficients.
 ```bash
 ./extended_euclid
 ```
