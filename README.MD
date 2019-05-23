@@ -1,18 +1,21 @@
 # Extended Euclidean Algorithm
 
-This program calculates the Greatest Common Denominator of two numbers.
+This program calculates the Greatest Common Denominator of two numbers *a* and *b* and the Bézout coefficients using the Extended Euclidean Algorithm. The Bézout coefficients of *GCD(a,b)* are the integers *x* and *y* that fulfill Bézout's Identity:
+
+*ax + by = GCD(a,b)*.
 
 ## Setup
 
 To use this program, the GNU Multi Precision Arithmetic Library [(GMP)](https://gmplib.org/) should be installed.
 Its fork, [MPIR](http://mpir.org/), can also be used.
-Instructions to set these up can be found online.
+
+Instructions to set up and configure these can be found online.
 
 ## Usage
 To build the program, the `make` command can be used. 
 
 
-Without command line arguments, the program will generate two random 4096 integers, calculate their GCD, and output their Bezout coefficients.
+There are two ways to run the program. Without command line arguments, the program will generate two random 4096 integers, calculate their GCD, and output their Bézout coefficients.
 ```bash
 ./extended_euclid
 ```
@@ -38,21 +41,21 @@ Bezout Coefficient for number 2:
 ```
 
 
-When arguments are used, *only* two numbers can be provided. The program will calculate their GCD and output their Bezout coefficients.
+When arguments are used, *only* two numbers can be provided (i.e. two numbers are required). The program will calculate their GCD and output their Bézout coefficients.
 ```bash
-./extended_euclid 31415 92653
+./extended_euclid 3141592 6535897932
 ```
 Example output:
 ```
 GMP GCD:
-1
+4
 
 Computed GCD:
-1
-
-Bezout Coefficient for number 2:
--9018
+4
 
 Bezout Coefficient for number 1:
-26597
+355720105
+
+Bezout Coefficient for number 2:
+-170983
 ```
