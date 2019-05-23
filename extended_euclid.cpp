@@ -3,14 +3,12 @@
 #include <gmpxx.h>
 #include <ctime>
 
-//using namespace std;
 using std::cout;
-using std::swap;
 
 void generateRandomNumbers(mpz_t &num1, mpz_t &num2) {
 	// Generate random state
 	gmp_randstate_t state;
-	unsigned long seed = time(0);
+	unsigned long seed = time(NULL);
 	gmp_randinit_default(state);
 	gmp_randseed_ui(state, seed);
 
@@ -21,7 +19,7 @@ void generateRandomNumbers(mpz_t &num1, mpz_t &num2) {
 	gmp_printf("Random number 1:\n%Zd\n", num1);
 	gmp_printf("\nRandom number 2:\n%Zd\n\n", num2);
 	gmp_randclear(state);
-}
+} // generateRandomNumbers
 
 void computeGCD(mpz_t &num1, mpz_t&num2, mpz_t &bezout_x, mpz_t &bezout_y) {
 	mpz_t x, y, zero;
@@ -54,9 +52,9 @@ void computeGCD(mpz_t &num1, mpz_t&num2, mpz_t &bezout_x, mpz_t &bezout_y) {
 		mpz_set(bezout_y, temp_y);
 
 		mpz_clears(quotient, remainder, placeholder, temp_x, temp_y, NULL);
-	}
+	} // while
 	mpz_clears(x, y, zero, NULL);
-}
+} // computeGCD
 
 int main(int argc, char *argv[]) {
 	// Initialize a and b in GCD(a,b)
@@ -75,12 +73,12 @@ int main(int argc, char *argv[]) {
 			break;
 
 		default:
-			mpz_clears(num1, num2, NULL);
 			cout << "Usage: " << argv[0] << " [NUM1] [NUM2]\n";
 			cout << "If input is provided, two numbers are required.\n";
 			cout << "Otherwise, computes GCD of two random numbers.\n";
+			mpz_clears(num1, num2, NULL);
 			exit(0);
-	}
+	} // switch
 
 	// Compute GCD using the GMP implementation
 	mpz_t gmp_gcd_res;
@@ -103,4 +101,4 @@ int main(int argc, char *argv[]) {
 	// Clear memory locations
 	mpz_clears(num1, num2, bezout_x, bezout_y, NULL);
 	return 0;
-}
+} // main
