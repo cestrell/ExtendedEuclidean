@@ -12,7 +12,7 @@ Its fork, [MPIR](http://mpir.org/), can also be used.
 Instructions to set up and configure these can be found online.
 
 ## Usage
-To build the program, the `make` command can be used. 
+To build the program, the `make` command should be used. 
 
 
 There are two ways to run the program. Without command line arguments, the program will generate two random 4096-bit integers, calculate their GCD, and output their Bézout coefficients.
