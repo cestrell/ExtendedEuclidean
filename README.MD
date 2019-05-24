@@ -1,4 +1,4 @@
-# Extended Euclidean Algorithm
+﻿# Extended Euclidean Algorithm
 
 This program calculates the Greatest Common Divisor of two numbers *a* and *b* and their Bézout coefficients using the Extended Euclidean Algorithm. The Bézout coefficients of *GCD(a,b)* are the integers *x* and *y* that fulfill Bézout's Identity:
 
@@ -59,3 +59,6 @@ Bezout Coefficient for number 1:
 Bezout Coefficient for number 2:
 -170983
 ```
+
+## Author
+Carlos Estrella
