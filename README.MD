@@ -1,6 +1,6 @@
 # Extended Euclidean Algorithm
 
-This program calculates the Greatest Common Denominator of two numbers *a* and *b* and their Bézout coefficients using the Extended Euclidean Algorithm. The Bézout coefficients of *GCD(a,b)* are the integers *x* and *y* that fulfill Bézout's Identity:
+This program calculates the Greatest Common Divisor of two numbers *a* and *b* and their Bézout coefficients using the Extended Euclidean Algorithm. The Bézout coefficients of *GCD(a,b)* are the integers *x* and *y* that fulfill Bézout's Identity:
 
 *ax + by = GCD(a,b)*.
 
